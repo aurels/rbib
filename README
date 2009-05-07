@@ -1,0 +1,4 @@
+Parser for BibTeX files written in Ruby. No dependencies (except Test::Unit if
+you need to run the tests).
+
+By Nick Gasson (http://www.doof.me.uk)
