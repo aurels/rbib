@@ -11,6 +11,10 @@ class TestParser < Test::Unit::TestCase
     assert_kind_of Entry, ryan98
     assert_equal EntryType::Article, ryan98.type
     assert_equal 1998, ryan98[:year].to_i
+
+    heys01 = b['heys01']
+    assert_equal "March", heys01[:month]
+    assert_equal 2001, heys01[:year].to_i
   end
 
   def test_parse_reparse

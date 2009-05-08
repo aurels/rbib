@@ -47,20 +47,30 @@ module BibTeX
 
     def self.parse_value
       close = :rbrace
+      brace_count = 1
       if @lexer.peek_token == :dquote then
         expect :dquote
         close = :dquote
-      else
+      elsif @lexer.peek_token == :lbrace then
         expect :lbrace, '{'
+      else
+        # Not surrounded by quotes or braces
+        brace_count = 0
       end
 
-      brace_count = 1
       str = ''
       @lexer.ignore_whitespace = false
       @lexer.ignore_newlines = true
       loop do
         unless @lexer.more_tokens?
           raise 'Unexpected end of input'
+        end
+
+        if (@lexer.peek_token == :comma \
+            or @lexer.peek_token == :rbrace) and brace_count == 0 then
+          # A field not delimited by "" or {}
+          @lexer.ignore_whitespace = true
+          return str
         end
         
         case @lexer.next_token!
@@ -85,7 +95,7 @@ module BibTeX
       pretty ||= token.to_s
       got = @lexer.next_token!
       unless got == token then
-        raise "#{@lexer.src_pos}: Expected '#{pretty}' but found '#{got}'"
+        raise "#{@lexer.src_pos}: Expected '#{pretty}' but found '#{got}' (text='#{@lexer.lval}')"
       else
         @lexer.lval
       end
