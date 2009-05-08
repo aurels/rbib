@@ -1,8 +1,8 @@
-require 'lib/bibtex/lexer'
+require 'bibtex/lexer'
 require 'test/unit'
 
 class TestLexer < Test::Unit::TestCase
-  include BibTeX
+  include Bibtex
   
   def test_basic
     l = Lexer.new do |rules|

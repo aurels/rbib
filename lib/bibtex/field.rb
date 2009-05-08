@@ -1,4 +1,4 @@
-module BibTeX
+module Bibtex
 
   # A field within an entry E.g. author = {Foo}
   class Field

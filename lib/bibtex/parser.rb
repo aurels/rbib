@@ -1,9 +1,9 @@
-require 'lib/bibtex/bibliography'
-require 'lib/bibtex/entry'
-require 'lib/bibtex/field'
-require 'lib/bibtex/lexer'
+require 'bibtex/bibliography'
+require 'bibtex/entry'
+require 'bibtex/field'
+require 'bibtex/lexer'
 
-module BibTeX
+module Bibtex
 
   class Parser
     def self.parse(filename)

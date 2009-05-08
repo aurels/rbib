@@ -5,7 +5,8 @@
 # Write the output to filename.stripped.bib
 #
 
-require 'lib/bibtex/parser'
+$LOAD_PATH.unshift(File.join(File.dirname(__FILE__), '..', 'lib'))
+require "bibtex"
 
 ARGV.each do |file|
   BibTeX::Parser.parse(file).map do |entry|

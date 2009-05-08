@@ -1,8 +1,8 @@
-require 'lib/bibtex/parser'
+require 'bibtex/parser'
 require 'test/unit'
 
 class TestParser < Test::Unit::TestCase
-  include BibTeX
+  include Bibtex
   
   def test_basic
     b = Parser.parse 'examples/example.bib'

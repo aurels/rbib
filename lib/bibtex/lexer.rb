@@ -1,6 +1,6 @@
 require 'strscan'
 
-module BibTeX
+module Bibtex
   class SourcePos
     attr_reader :line, :column, :file
     

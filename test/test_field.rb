@@ -1,8 +1,8 @@
-require 'lib/bibtex/field'
+require 'bibtex/field'
 require 'test/unit'
 
 class TestField < Test::Unit::TestCase
-  include BibTeX
+  include Bibtex
 
   def test_basic
     f = Field.new(:author, 'C. Doof')

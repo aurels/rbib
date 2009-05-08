@@ -1,6 +1,6 @@
-require 'lib/bibtex/entry'
+require 'bibtex/entry'
 
-module BibTeX
+module Bibtex
   
   class Bibliography    
     attr_reader :entries

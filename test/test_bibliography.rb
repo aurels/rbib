@@ -1,8 +1,8 @@
-require 'lib/bibtex/bibliography'
+require 'bibtex/bibliography'
 require 'test/unit'
 
 class TestBibliography < Test::Unit::TestCase
-  include BibTeX
+  include Bibtex
 
   def setup
     @b = Bibliography.new

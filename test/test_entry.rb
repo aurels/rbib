@@ -1,8 +1,8 @@
-require 'lib/bibtex/entry'
+require 'bibtex/entry'
 require 'test/unit'
 
 class TestEntry < Test::Unit::TestCase
-  include BibTeX
+  include Bibtex
 
   def setup
     @e = Entry.new(EntryType::Book, 'foo01')

@@ -1,4 +1,4 @@
-module BibTeX
+module Bibtex
 
   # A single entry in a bibliography
   class Entry
