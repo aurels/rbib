@@ -108,7 +108,6 @@ module BibTeX
       rules.match /\"/, :dquote
       rules.match /\=/, :equals
       rules.match /\,/, :comma
-      #rules.match /[\w\-_:]+/, :id
       rules.match /[\w\-_:&]+/, :id
       rules.match /.+?/, :cdata
     end
