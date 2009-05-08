@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = "rbib"
-  s.version     = "1.0.3"
+  s.version     = "1.1"
   s.date        = "2009-05-07"
   s.summary     = "BibTeX parser in Ruby"
   s.email       = "aurelien.malisart@gmail.com"
