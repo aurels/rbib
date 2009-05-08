@@ -1,4 +1,4 @@
-require 'bibtex/entry'
+require 'lib/bibtex/entry'
 require 'test/unit'
 
 class TestEntry < Test::Unit::TestCase

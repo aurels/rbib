@@ -12,7 +12,7 @@ BadFields = [:url]
 
 require 'net/http'
 require 'uri'
-require 'bibtex/parser'
+require 'lib/bibtex/parser'
 
 bibtex = Net::HTTP.get URI.parse("http://www.citeulike.org/bibtex/user/#{User}")
 BibTeX::Parser.parse_string(bibtex).map do |entry|

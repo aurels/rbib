@@ -5,7 +5,7 @@
 # Write the output to filename.stripped.bib
 #
 
-require 'bibtex/parser'
+require 'lib/bibtex/parser'
 
 ARGV.each do |file|
   BibTeX::Parser.parse(file).map do |entry|

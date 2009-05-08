@@ -1,11 +1,11 @@
-require 'bibtex/parser'
+require 'lib/bibtex/parser'
 require 'test/unit'
 
 class TestParser < Test::Unit::TestCase
   include BibTeX
   
   def test_basic
-    b = Parser.parse 'example.bib'
+    b = Parser.parse 'examples/example.bib'
 
     ryan98 = b['ryan98']
     assert_kind_of Entry, ryan98
@@ -19,7 +19,7 @@ class TestParser < Test::Unit::TestCase
 
   def test_parse_reparse
     fname = '/tmp/example.bib.stripped'
-    b = Parser.parse 'example.bib'
+    b = Parser.parse 'examples/example.bib'
     b.save fname
     Parser.parse fname
     File.delete fname    

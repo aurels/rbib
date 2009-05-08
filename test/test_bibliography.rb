@@ -1,4 +1,4 @@
-require 'bibtex/bibliography'
+require 'lib/bibtex/bibliography'
 require 'test/unit'
 
 class TestBibliography < Test::Unit::TestCase

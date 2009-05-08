@@ -1,4 +1,4 @@
-require 'bibtex/field'
+require 'lib/bibtex/field'
 require 'test/unit'
 
 class TestField < Test::Unit::TestCase

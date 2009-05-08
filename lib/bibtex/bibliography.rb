@@ -1,4 +1,4 @@
-require 'bibtex/entry'
+require 'lib/bibtex/entry'
 
 module BibTeX
   

@@ -1,7 +1,7 @@
-require 'bibtex/bibliography'
-require 'bibtex/entry'
-require 'bibtex/field'
-require 'bibtex/lexer'
+require 'lib/bibtex/bibliography'
+require 'lib/bibtex/entry'
+require 'lib/bibtex/field'
+require 'lib/bibtex/lexer'
 
 module BibTeX
 
