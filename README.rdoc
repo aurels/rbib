@@ -5,16 +5,16 @@ By Nick Gasson (http://www.doof.me.uk)
 
 == Example of usage
 
-require 'rubygems'
-require 'bibtex'
+  require 'rubygems'
+  require 'bibtex'
 
-BibTeX::Parser.parse('references.bib').map do |entry|
-  puts entry[:Title]
-  puts entry[:Year]
-  entry
-end
+  BibTeX::Parser.parse('references.bib').map do |entry|
+    puts entry[:Title]
+    puts entry[:Year]
+    entry
+  end
 
 == Installation
 
-gem sources -a http://gems.github.com
-gem install aurels-rbib
+  gem sources -a http://gems.github.com
+  gem install aurels-rbib
