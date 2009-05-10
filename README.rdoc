@@ -3,7 +3,7 @@ you need to run the tests).
 
 By Nick Gasson (http://www.doof.me.uk)
 
-Example of usage:
+== Example of usage
 
 require 'rubygems'
 require 'bibtex'
@@ -14,7 +14,7 @@ BibTeX::Parser.parse('references.bib').map do |entry|
   entry
 end
 
-Installation:
+== Installation
 
 gem sources -a http://gems.github.com
 gem install aurels-rbib
