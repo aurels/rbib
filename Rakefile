@@ -2,7 +2,7 @@ require 'rubygems'
 require 'rake'
 require 'echoe'
 
-Echoe.new('rbib', '1.3') do |p|
+Echoe.new('rbib', '2.0') do |p|
   p.description = 'BibTeX parser written in Ruby'
   p.url         = 'http://github.com/aurels/rbib'
   p.author      = 'Nick Gasson, Aurélien Malisart'
