@@ -95,7 +95,7 @@ module Bibtex
       pretty ||= token.to_s
       got = @lexer.next_token!
       unless got == token then
-        raise "#{@lexer.src_pos}: Expected '#{pretty}' but found '#{got}' (text='#{@lexer.lval}')"
+        raise "#{@lexer.src_pos}: Expected '#{pretty}' but found token '#{got}' (text='#{@lexer.lval}')"
       else
         @lexer.lval
       end

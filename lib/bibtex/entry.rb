@@ -8,6 +8,7 @@ module Bibtex
       @type = type
       @key = key
       @fields = {}
+      $stderr.print key,"\n"
     end
 
     def add_field(obj, value = nil)
@@ -20,12 +21,29 @@ module Bibtex
 
     def [](key)
       f = @fields[key]
+      f = @fields[key.to_s.downcase.to_sym] if !f
       if f then
         f.value
       else
-        raise "No field with key #{key}"
+        # raise "No field with key #{key}"
+        ""
       end
     end
+
+    def has? key
+      field = self[key]
+      field != nil and field.strip != ''
+    end
+
+    # Make sure the field exists and has meaningful data
+    def required key
+      if !has?(key)
+        $stderr.print self
+        raise "Key #{key} does not exist"
+      end
+      self[key]
+    end
+
 
     def to_s
       fs = @fields.collect { |k, f| "  #{f.to_s}" }.sort.join ",\n"
@@ -47,6 +65,7 @@ module Bibtex
       end
       return r
     end 
+
   end
 
   # Different types of entries
