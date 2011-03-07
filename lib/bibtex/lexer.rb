@@ -26,7 +26,7 @@ module Bibtex
 
     def literals(words)
       words.each do |w|
-        match /#{w}/, w
+        match(/#{w}/, w)
       end
     end
 
@@ -76,7 +76,7 @@ module Bibtex
     end
     
     def next_token!
-      if @scanner.check /^\s*\n/ then
+      if @scanner.check(/^\s*\n/) then
         @lineno += 1
         @cols_prev = @scanner.pos + 1
       end
@@ -112,11 +112,11 @@ module Bibtex
 
     def skip_whitespace
       if @ignore_newlines and @ignore_whitespace then
-        @scanner.skip /\s+/
+        @scanner.skip(/\s+/)
       elsif @ignore_whitespace then
-        @scanner.skip /[ \t\r]+/
+        @scanner.skip(/[ \t\r]+/)
       elsif @ignore_newlines  then
-        @scanner.skip /[\r\n]+/
+        @scanner.skip(/[\r\n]+/)
       end
     end
   end

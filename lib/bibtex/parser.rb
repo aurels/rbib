@@ -102,14 +102,14 @@ module Bibtex
     end
 
     @lexer = Lexer.new(true) do |rules|
-      rules.match /@/, :at
-      rules.match /\{/, :lbrace
-      rules.match /\}/, :rbrace
-      rules.match /\"/, :dquote
-      rules.match /\=/, :equals
-      rules.match /\,/, :comma
-      rules.match /[\w\-_:&]+/, :id
-      rules.match /.+?/, :cdata
+      rules.match(/@/,:at)
+      rules.match(/\{/,:lbrace)
+      rules.match(/\}/,:rbrace)
+      rules.match(/\"/,:dquote)
+      rules.match(/\=/,:equals)
+      rules.match(/\,/,:comma)
+      rules.match(/[\w\-_:&]+/,:id)
+      rules.match(/.+?/,:cdata)
     end
   end
   
