@@ -11,6 +11,7 @@ module Bibtex
     
     def <<(e)
       if e.kind_of? Entry then
+        $stderr.print "Warning: Bibtex duplicate entry <#{e.key}>\n" if @entries[e.key]
         @entries[e.key] = e
       else
         raise 'Cannot add non-entries to bibliography'

@@ -8,7 +8,7 @@ module Bibtex
       @type = type
       @key = key
       @fields = {}
-      $stderr.print key,"\n"
+      $stderr.print key,"\n" if $DEBUG
     end
 
     def add_field(obj, value = nil)
